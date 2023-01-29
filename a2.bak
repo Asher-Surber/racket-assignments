@@ -1,0 +1,14 @@
+#lang racket
+
+;;Assignment 2
+;;Asher Surber
+
+;;1 list-ref
+
+(define list-ref
+  (lambda (ls n)
+    (letrec
+        ([nth-cdr (lambda (n)
+	            ;; complete the definition
+                    )])
+      (car (nth-cdr n)))))
