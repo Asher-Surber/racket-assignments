@@ -9,6 +9,10 @@
   (lambda (ls n)
     (letrec
         ([nth-cdr (lambda (n)
-	            ;; complete the definition
-                    )])
+                    (cond
+                      [(eqv? n 0) '()]
+                      [else list-ref((cdr ls) (sub1 n))])
       (car (nth-cdr n)))))
+
+(list-ref '(a b c) 2)
+(list-ref '(a b c) 0)
