@@ -56,10 +56,15 @@
     (cons env (cons var val))))
 
 
-(define apply-env-ds)
+(define apply-env-ds
+  (λ (env var)
+    (assv var env)))
 
 
-(define make-closure-ds)
+(define make-closure-ds
+  (λ (arg body env)
+    (`'(make-closure-ds ,arg ,body ,env))))
 
 
-(define apply-closure-ds)
+(define apply-closure-ds
+  )
